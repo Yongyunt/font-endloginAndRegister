@@ -18,21 +18,21 @@ import HomeScreen from './Home'
 
 
 export default class LoginScreen extends ValidationComponent {
-  _isMounted = false;
+    _isMounted = false;
 
-  state = {
-      isLoading: false,
-      username: "Paisodsod",
-      password: "password",
-  };
+    state = {
+        isLoading: false,
+        username: "Paisodsod",
+        password: "password",
+    };
 
-  constructor(props) {
-      super(props);
-  }
+    constructor(props) {
+        super(props);
+    }
 
-  _storeTokenData = async (value) => {
-      try {
-          await AsyncStorage.setItem('@storage_TokenKey', value)
+    _storeTokenData = async (value) => {
+        try {
+            await AsyncStorage.setItem('@storage_TokenKey', value)
 
       } catch (e) {
           // saving error
